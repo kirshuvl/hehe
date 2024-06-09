@@ -4,8 +4,6 @@ Install the `make` utility:
 ```
 sudo apt install make
 ```
-
-
 Create application in the Docker [Development]:
 ```
 make app

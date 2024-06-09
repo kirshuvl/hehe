@@ -9,7 +9,6 @@
         "dev": "vite --host 0.0.0.0",
         "server": "vite server",
         "start": "vite",
-
         "typecheck": "tsc --noEmit",
         "typecheck:watch": "tsc --noEmit --watch",
         "check:code": "npx @biomejs/biome check src --log-kind=compact --verbose",

@@ -1,3 +1,7 @@
-docker/
+.dockerignore
 .git/
-node_modules/
+.gitignore
+docker/
+Dockerfile
+Makefile
+README.md

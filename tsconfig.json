@@ -8,13 +8,17 @@
         "esModuleInterop": true,
         "jsx": "preserve",
         "jsxImportSource": "solid-js",
-        "types": ["vite/client"],
+        "types": [
+            "vite/client"
+        ],
         "resolveJsonModule": true,
         "strictNullChecks": true,
         "noEmit": true,
         "isolatedModules": true,
         "skipLibCheck": true,
-
-        "lib": ["es2023", "dom"]
+        "lib": [
+            "es2023",
+            "dom"
+        ]
     }
 }
