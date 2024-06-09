@@ -16,3 +16,18 @@ jobs:
     - name: Install Dependencies
       run: npm i
 
+    - name: Install CI checks
+      run: npm ci
+
+    - name: Check types
+      run: npm run typecheck
+
+    - name: Lint with Biome
+      run: npm run check:code
+
+    - name: Lint styles
+      run: npm run lint:styles
+
+    - name: Test production build
+      run: npm run build
+
