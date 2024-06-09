@@ -15,3 +15,6 @@ jobs:
 
     - name: Make Dev Application in Docker
       run: make app
+    
+    - name: Check Docker Container
+      run: make check
