@@ -19,14 +19,17 @@ jobs:
     - name: Install CI checks
       run: npm ci
 
-    - name: Check types
+    - name: Check Types
       run: npm run typecheck
 
     - name: Lint with Biome
       run: npm run check:code
 
-    - name: Lint styles
+    - name: Lint Styles
       run: npm run lint:styles
+
+    - name: Lint Code
+      run: npm run lint:code
 
     - name: Test Production Build
       run: npm run build

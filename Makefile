@@ -27,3 +27,7 @@ production-down:
 .PHONY: app-logs
 app-logs: 
 	${LOGS} ${SOLIDJS_CONTAINER} -f
+
+.PHONY: lint
+lint:
+	npm run lint
