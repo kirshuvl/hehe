@@ -11,12 +11,7 @@ RUN npm install
 # Копируем остальные файлы проекта
 COPY . .
 
-# Собираем проект
-RUN npm run build
 
 EXPOSE 3000
 # Команда для запуска контейнера
-CMD ["npm", "run", "preview"]
-
-# Открываем порт 3000
-
+CMD ["npm", "run", "dev"]

@@ -8,7 +8,12 @@ ENV = --env-file .env
 
 .PHONY: app
 app: 
-	${DC} -f ${SOLIDJS_FILE} up --build -d
+	${DC} -f ${SOLIDJS_FILE} build --build-arg COMMAND=dev
+	${DC} -f ${SOLIDJS_FILE} up -d
+
+.PHONY: production
+production: 
+	${DC} -f ${SOLIDJS_FILE} --build-arg COMMAND=preview up --build -d
 
 .PHONY: app-logs
 app-logs: 
