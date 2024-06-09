@@ -30,4 +30,4 @@ app-logs:
 
 .PHONY: lint
 lint:
-	npm run lint
+	npm run check:code:fix && lint:styles:fix
