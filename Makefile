@@ -1,6 +1,8 @@
 DC = docker compose -p itpolygon-frontend-lms
-SOLIDJS_FILE = docker/solidjs.yaml
+SOLIDJS_FILE_DEVELOPMENT = docker/dev.yaml
 SOLIDJS_CONTAINER = lms
+
+SOLIDJS_FILE_PRODUCTION = docker/prod.yaml
 
 EXEC = docker exec -it
 LOGS = docker logs
@@ -8,17 +10,20 @@ ENV = --env-file .env
 
 .PHONY: app
 app: 
-	${DC} -f ${SOLIDJS_FILE} build --build-arg COMMAND=dev
-	${DC} -f ${SOLIDJS_FILE} up -d
+	${DC} -f ${SOLIDJS_FILE_DEVELOPMENT} up --build -d
+
+.PHONY: app-down
+app-down: 
+	${DC} -f ${SOLIDJS_FILE_DEVELOPMENT} down
 
 .PHONY: production
 production: 
-	${DC} -f ${SOLIDJS_FILE} --build-arg COMMAND=preview up --build -d
+	${DC} -f ${SOLIDJS_FILE_PRODUCTION} up --build -d
+
+.PHONY: production-down
+production-down: 
+	${DC} -f ${SOLIDJS_FILE_PRODUCTION} down
 
 .PHONY: app-logs
 app-logs: 
 	${LOGS} ${SOLIDJS_CONTAINER} -f
-
-.PHONY: app-down
-app-down: 
-	${DC} -f ${SOLIDJS_FILE} down

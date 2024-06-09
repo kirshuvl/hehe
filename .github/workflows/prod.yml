@@ -1,4 +1,4 @@
-name: Frontend Docker
+name: Frontend Docker [Production]
 
 on:
   push:
@@ -13,5 +13,5 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Make Application in Docker
-      run: make app
+    - name: Make Production Application in Docker
+      run: make production
