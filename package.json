@@ -33,7 +33,8 @@
       "typescript": "^5.3.3",
       "vite": "^5.0.11",
       "vite-plugin-copy": "^0.1.6",
-      "vite-plugin-solid": "^2.8.2"
+      "vite-plugin-solid": "^2.8.2",
+      "rollup": "4.17.2"
   },
   "dependencies": {
       "@solidjs/router": "^0.13.1",
