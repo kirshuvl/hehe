@@ -1,0 +1,17 @@
+name: Frontend Lint
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    name: Check Application
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install Dependencies
+      uses: npm i
